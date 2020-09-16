@@ -1,0 +1,42 @@
+.header {
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; */
+}
+
+.brand {
+  display: flex;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #222;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.list {
+  display: flex;
+}
+
+.item {
+  padding: 0 1.5rem;
+  font-size: 1.4rem;
+}
+
+.link {
+  color: #252e48;
+  font-weight: bold;
+}

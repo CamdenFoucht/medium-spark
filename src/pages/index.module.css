@@ -1,0 +1,13 @@
+.headerText {
+  font-size: 3.2rem;
+  line-height: 1.5;
+}
+
+.hero {
+  height: 82vh;
+  padding: 6rem 0;
+}
+
+.video {
+  max-width: 100%;
+}

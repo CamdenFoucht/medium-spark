@@ -1,21 +1,50 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { Grid } from "../components/grid"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Container from "../components/container"
+
+import styles from "./index.module.css"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+
+    <div className={styles.hero}>
+      <Container>
+        <Grid cols={2} style={{ height: "100%" }}>
+          <div
+            style={{
+              background: "#fff",
+              height: "100%",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <p className={styles.headerText}>
+              We turn ideas into extraordinary <br />
+              digital advertisements and sales
+            </p>
+          </div>
+          <div>
+            <video muted playsinline autoPlay loop className={styles.video}>
+              <source
+                src="https://biteable.com/static-assets/marketing/commercial-hub.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </Grid>
+      </Container>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+
+    <section>
+      <h2>Our Work</h2>
+    </section>
+
+    <section>
+      <h2>Our Clients</h2>
+    </section>
   </Layout>
 )
 

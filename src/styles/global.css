@@ -1,0 +1,37 @@
+html {
+  background: #fff;
+}
+
+.grid {
+  display: grid;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+.primary {
+  color: #363073;
+}
+
+.center {
+  text-align: center;
+}
+
+.my-3 {
+  margin: 3rem 0;
+}
+
+.mt-6 {
+  margin-top: 6rem;
+}
+
+.small {
+  font-size: 1rem;
+}
+
+.bold {
+  font-weight: bold;
+}

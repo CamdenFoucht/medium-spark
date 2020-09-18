@@ -1,5 +1,7 @@
 import React from "react"
 
+import styles from "./headers.module.css"
+
 export const H1 = props => (
   <h1
     style={{
@@ -29,3 +31,17 @@ export const LandingHeading = props => (
 )
 
 export const PrimaryHeading = props => <H1 color="#2e476b">{props.children}</H1>
+
+export const SectionHeading = props => (
+  <h2
+    style={{
+      position: "relative",
+      fontSize: "3.2rem",
+      marginBottom: "4rem",
+      color: props.color ? props.color : "rgba(0,0,0,.8)",
+    }}
+    className={styles.sectionHeading}
+  >
+    {props.children}
+  </h2>
+)

@@ -15,7 +15,19 @@ const Logo = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return (
+    <h1
+      style={{
+        fontWeight: 600,
+        fontSize: "2rem",
+        color: "#222",
+        fontWeight: 400,
+        textTransform: "capitalize",
+      }}
+    >
+      Spark Medium
+    </h1>
+  )
 }
 
 export default Logo

@@ -4,6 +4,17 @@
   left: 0;
   right: 0;
   z-index: 1000; */
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: top 0.6s;
+  z-index: 10000;
+}
+
+.headerHidden {
+  top: -75px;
 }
 
 .brand {
@@ -14,7 +25,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.6rem;
+  padding: 1.6rem 0;
 }
 
 .brand {
@@ -37,6 +48,121 @@
 }
 
 .link {
+  position: relative;
   color: #252e48;
   font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #38384f;
+  background: transparent;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.link::before {
+  opacity: 1;
+  width: 100%;
+  top: 17px;
+  content: "";
+  height: 5px;
+  position: absolute;
+  background: #99efb5;
+  background: #45b29a;
+  border-radius: 2.5px;
+  left: 0;
+  z-index: -1;
+  transition: all 0.15s ease-in-out;
+  transform-origin: left;
+}
+
+.link::before {
+  transform: scaleX(0);
+}
+
+.link:hover::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.activeLink {
+  position: relative;
+}
+
+.activeLink::before {
+  opacity: 1;
+  width: 100%;
+  top: 17px;
+  content: "";
+  height: 5px;
+  position: absolute;
+  background: #99efb5;
+  background: #45b29a;
+  border-radius: 2.5px;
+  left: 0;
+  z-index: -1;
+  transform: scaleX(1) !important;
+}
+
+/* Hamburger & Full Screen */
+.hamburger {
+  cursor: pointer;
+  position: relative;
+  /* top: 2rem;
+  left: 2rem; */
+  z-index: 10000;
+  width: 30px;
+  height: 40px;
+  display: none;
+}
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background-color: red;
+  position: absolute;
+  transition: 0.4s;
+}
+
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+.hamburger span:nth-child(2) {
+  top: 19px;
+}
+.hamburger span:nth-child(3) {
+  top: 28px;
+}
+
+.fullScreenMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #333;
+  z-index: 1000;
+}
+
+.fullScreenList {
+}
+
+/* @media only screen and (max-width: 568px) {
+  .hamburger {
+    display: block;
+  }
+  .list {
+    display: none;
+  }
+} */
+
+@media only screen and (max-width: 568px) {
+  .item {
+    padding: 0 0.5rem;
+  }
+  .link {
+    font-size: 1rem;
+  }
+  .brand {
+    font-size: 1.4rem;
+  }
 }

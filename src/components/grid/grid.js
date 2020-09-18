@@ -1,7 +1,10 @@
 import React from "react"
 
-export const Grid = props => (
+import styles from "./grid.module.css"
+
+const Grid = props => (
   <div
+    className={styles.grid}
     style={{
       display: "grid",
       gridTemplateColumns: `repeat(${props.cols}, 1fr)`,
@@ -11,3 +14,5 @@ export const Grid = props => (
     {props.children}
   </div>
 )
+
+export default Grid

@@ -1,0 +1,8 @@
+.grid {
+}
+
+@media only screen and (max-width: 568px) {
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+}

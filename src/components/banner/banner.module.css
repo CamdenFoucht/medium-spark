@@ -1,0 +1,31 @@
+.banner {
+  background-color: #15141a;
+  background-color: #212129;
+  padding: 9rem 0;
+  color: #fff;
+}
+
+.banner svg {
+  max-height: 300px;
+  max-width: 100%;
+}
+
+.heading {
+  font-size: 3.6rem;
+  margin-bottom: 3rem;
+  color: #45b29a;
+  color: #fff;
+}
+
+@media only screen and (max-width: 568px) {
+  .heading {
+    margin-top: 3rem;
+  }
+  .banner {
+    text-align: center;
+  }
+  .svgContainer {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}

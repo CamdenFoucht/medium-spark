@@ -1,0 +1,5 @@
+@media only screen and (max-width: 568px) {
+  .sectionHeading {
+    font-size: 1.8rem !important;
+  }
+}

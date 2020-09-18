@@ -35,3 +35,10 @@ html {
 .bold {
   font-weight: bold;
 }
+
+.flexbox-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

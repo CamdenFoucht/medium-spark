@@ -5,14 +5,8 @@ import styles from "./navbar.module.css"
 import Container from "../container"
 
 const Navbar = ({ siteTitle }) => {
-
-
-  useEffect(() => {
-
   return (
-    <header
-      className={style.header}
-    >
+    <header className={style.header}>
       <Container>
         <nav className={styles.nav}>
           <div className={styles.brand}>spark medium</div>

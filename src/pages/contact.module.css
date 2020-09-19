@@ -58,6 +58,7 @@
   box-sizing: border-box;
   font-size: 1.4rem;
   line-height: 29px;
+  transition: 0.3s;
 }
 
 .input:focus,
@@ -74,6 +75,7 @@ input:active,
 .error {
   color: #bf1515;
   font-size: 1.2rem;
+  animation: fadeIn 0.3s forwards ease-in;
 }
 
 .address {
@@ -100,4 +102,13 @@ input:active,
 .contactLink {
   color: rgb(98, 125, 152);
   text-decoration: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -27,8 +27,9 @@ const AboutPage = () => (
             <Grid cols={3} style={{ gridTemplateColumns: "1fr 2fr 1fr" }}>
               <Grid cols={1}>
                 <div
-                  className="flexbox-center"
-                  style={{ transform: `translateX(-12rem)` }}
+                  className={[styles.transformLeftLarge, "flexbox-center"].join(
+                    " "
+                  )}
                 >
                   <span className={styles.span}>
                     <CountUp end={130} />+
@@ -36,8 +37,10 @@ const AboutPage = () => (
                   <p className={styles.p}>Advertisements Made</p>
                 </div>
                 <div
-                  className="flexbox-center"
-                  style={{ transform: `translateX(-6rem)` }}
+                  className={[
+                    styles.transformLeftMedium,
+                    "flexbox-center",
+                  ].join(" ")}
                 >
                   <span className={styles.span}>
                     <CountUp end={50} />+
@@ -56,8 +59,10 @@ const AboutPage = () => (
               </div>
               <div className={styles.gridRight}>
                 <div
-                  className="flexbox-center"
-                  style={{ transform: `translateX(12rem)` }}
+                  className={[
+                    styles.transformRightLarge,
+                    "flexbox-center",
+                  ].join(" ")}
                 >
                   <span className={styles.span}>
                     <CountUp end={11} />
@@ -65,8 +70,10 @@ const AboutPage = () => (
                   <p className={styles.p}>Designers & Animators</p>
                 </div>
                 <div
-                  className="flexbox-center"
-                  style={{ transform: `translateX(6rem)` }}
+                  className={[
+                    styles.transformRightMedium,
+                    "flexbox-center",
+                  ].join(" ")}
                 >
                   <span className={styles.span}>
                     <CountUp end={100} />%

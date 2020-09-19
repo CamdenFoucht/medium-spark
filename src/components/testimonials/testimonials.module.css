@@ -112,3 +112,20 @@
     font-size: 2.4rem;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .quoteWrapper {
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .flexContainer {
+    flex-direction: column;
+  }
+  .arrowWrapper {
+    margin-left: 0;
+  }
+  .char {
+    font-size: 1.8rem;
+  }
+}

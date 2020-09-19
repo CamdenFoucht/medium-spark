@@ -82,7 +82,9 @@ const Projects = props => {
     projects = projects.slice(0, props.max)
   }
 
-  let items = projects.map((el, index) => <Project {...el} />)
+  let items = projects.map((el, index) => (
+    <Project onClick={props.onClick} {...el} />
+  ))
 
   return (
     <Grid cols="2" style={{ gridColumnGap: "10rem" }}>

@@ -20,12 +20,19 @@
 @media only screen and (max-width: 568px) {
   .heading {
     margin-top: 3rem;
+    font-size: 1.8rem;
   }
   .banner {
+    padding: 3rem 0;
     text-align: center;
   }
   .svgContainer {
     grid-row-start: 1;
     grid-row-end: 2;
+  }
+  .svgContainer svg {
+    max-width: 250px;
+    max-height: 200px;
+    margin: auto;
   }
 }

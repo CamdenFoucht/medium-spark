@@ -20,14 +20,15 @@ const Project = props => {
     <Fade bottom delay={props.delay} duration={600}>
       <div
         onClick={() => props.onClick(props.src)}
-        className={styles.workProject}
+        className={[styles.workProject, props.isOdd ? styles.isOdd : ""].join(
+          " "
+        )}
         onMouseEnter={event => {
           ref.current.play()
         }}
         onMouseLeave={event => {
           ref.current.src = props.src
         }}
-        style={{ paddingTop: props.isOdd ? "6rem" : 0 }}
       >
         <div className={styles.workCard}>
           <video

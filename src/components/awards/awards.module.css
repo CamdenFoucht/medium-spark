@@ -12,3 +12,14 @@
   padding: 1rem 0;
   margin-bottom: 4rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media only screen and (max-width: 568px) {
+  .row {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}

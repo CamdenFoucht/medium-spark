@@ -78,7 +78,7 @@ const Companies = props => {
     return (
       <li>
         <Fade bottom delay={(index % 6) * 50}>
-          <div style={{ padding: "1rem" }}>
+          <div className={styles.container}>
             <div>{el.logo}</div>
             {props.text ? <p style={{ marginTop: "3rem" }}>{el.text}</p> : null}
           </div>

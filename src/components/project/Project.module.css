@@ -55,8 +55,18 @@
   object-fit: cover;
 }
 
+.isOdd {
+  padding-top: 6rem;
+}
+
 @media only screen and (max-width: 568px) {
+  .workProject {
+    margin-bottom: 2rem;
+  }
   .workCompany {
     font-size: 1.4rem;
+  }
+  .isOdd {
+    padding-top: 0;
   }
 }

@@ -130,7 +130,7 @@ const IndexPage = () => {
           <h2 className={styles.sectionHeading}>Our Work</h2>
 
           <div>
-            <Projects max={4} />
+            <Projects max={4} onClick={openPlayer} />
             <Link to="/work" className={styles.link}>
               View more work
             </Link>
@@ -140,12 +140,7 @@ const IndexPage = () => {
 
       <section className={styles.section}>
         <Container>
-          <h2
-            className={styles.sectionHeading}
-            style={{ marginBottom: "6rem" }}
-          >
-            Trusted by
-          </h2>
+          <h2 className={styles.sectionHeading}>Trusted by</h2>
           <Companies max={10} cols={5} />
 
           <div className={styles.linkContainer} style={{ marginTop: "3rem" }}>

@@ -15,7 +15,9 @@ const Banner = () => (
       >
         <div style={{}}>
           <h4 className={styles.heading}>Lets start something together!</h4>
-          <ButtonLink to="/contact">Start a Project</ButtonLink>
+          <div>
+            <ButtonLink to="/contact">Start a Project</ButtonLink>
+          </div>
         </div>
         <div className={styles.svgContainer}>
           <Undraw2 />

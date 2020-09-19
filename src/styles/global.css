@@ -42,3 +42,18 @@ html {
   justify-content: center;
   flex-direction: column;
 }
+
+@media only screen and (max-width: 568px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: #45b29a;
+}
+
+::selection {
+  background: #45b29a;
+}

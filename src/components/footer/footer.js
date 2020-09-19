@@ -1,7 +1,7 @@
 import React from "react"
 import Container from "../container"
 import Grid from "../grid/grid"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import styles from "./footer.module.css"
 import Logo from "../logo"
 import Img from "gatsby-image"
@@ -34,29 +34,27 @@ const Footer = () => {
             <div>
               <Logo />
             </div>
-            <a className={styles.link} href="#">
-              sparkmedium@gmail.com
-            </a>
+            <a className={styles.link}>sparkmedium@gmail.com</a>
             <a className={styles.phoneNumber}>202.202.202</a>
           </div>
           <div className={styles.col}>
             <h2 className={styles.heading}>Quick Links</h2>
             <ul>
               <li>
-                <a className={styles.link} href="#">
+                <Link to="/" className={styles.link}>
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a className={styles.link} href="#">
+                <Link to="/work" className={styles.link}>
                   Work
-                </a>
+                </Link>
               </li>
               <li>
                 {" "}
-                <a className={styles.link} href="#">
+                <Link className={styles.link} to="/contact">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -64,26 +62,26 @@ const Footer = () => {
             <h2 className={styles.heading}>About Us</h2>
             <ul>
               <li>
-                <a className={styles.link} href="#">
+                <Link className={styles.link} to="/about">
                   About Spark Medium
-                </a>
+                </Link>
               </li>
               <li>
                 {" "}
-                <a className={styles.link} href="#">
+                <Link className={styles.link} to="/about">
                   Testimonials
-                </a>
+                </Link>
               </li>
               <li>
-                <a className={styles.link} href="#">
+                <Link className={styles.link} to="/contact">
                   Jobs
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.col}>
             <h2 className={styles.heading}>Find Us</h2>
-            <p className={styles.link} href="#">
+            <p className={styles.link}>
               555 W 5th St, 35th Floor
               <br /> Los Angeles, CA 90013, US
             </p>

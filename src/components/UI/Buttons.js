@@ -1,8 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
+import styles from "./buttons.module.css"
 
 export const Button = props => (
   <button
+    className={styles.button}
     {...props}
     style={{
       padding: "1.25rem 2rem",
@@ -11,6 +13,8 @@ export const Button = props => (
       border: "none",
       borderRadius: "3px",
       cursor: "pointer",
+      display: "inline-block",
+
       ...props.style,
     }}
   >
@@ -20,6 +24,7 @@ export const Button = props => (
 
 export const ButtonLink = props => (
   <Link
+    className={styles.buttonLink}
     {...props}
     style={{
       padding: "1.25rem 2rem",
@@ -28,7 +33,9 @@ export const ButtonLink = props => (
       border: "none",
       borderRadius: "3px",
       cursor: "pointer",
+      display: "inline-block",
       ...props.style,
+      textDecoration: "none",
     }}
   >
     {props.children}

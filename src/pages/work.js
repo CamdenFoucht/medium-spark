@@ -22,7 +22,7 @@ const WorkPage = () => {
         <Container>
           <h1 className={styles.h1}>Our Work</h1>
           <div>
-            <Projects />
+            <Projects onClick={openPlayer} />
           </div>
         </Container>
       </div>

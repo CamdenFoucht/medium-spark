@@ -1,6 +1,7 @@
 import React from "react"
+import { Link } from "gatsby"
 
-const Button = props => (
+export const Button = props => (
   <button
     {...props}
     style={{
@@ -17,4 +18,19 @@ const Button = props => (
   </button>
 )
 
-export default Button
+export const ButtonLink = props => (
+  <Link
+    {...props}
+    style={{
+      padding: "1.25rem 2rem",
+      color: "rgba(0,0,0,.8)",
+      background: "#45b29a",
+      border: "none",
+      borderRadius: "3px",
+      cursor: "pointer",
+      ...props.style,
+    }}
+  >
+    {props.children}
+  </Link>
+)

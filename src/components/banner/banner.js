@@ -4,7 +4,7 @@ import Grid from "../grid/grid"
 import { Link } from "gatsby"
 import styles from "./banner.module.css"
 import Undraw2 from "../../images/undraw2.svg"
-import Button from "../UI/Buttons"
+import { ButtonLink } from "../UI/Buttons"
 
 const Banner = () => (
   <section className={styles.banner}>
@@ -15,7 +15,7 @@ const Banner = () => (
       >
         <div style={{}}>
           <h4 className={styles.heading}>Lets start something together!</h4>
-            <ButtonLink to="/contact">Start a Project</ButtonLink>
+          <ButtonLink to="/contact">Start a Project</ButtonLink>
         </div>
         <div className={styles.svgContainer}>
           <Undraw2 />

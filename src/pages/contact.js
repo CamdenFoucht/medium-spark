@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Container from "../components/container"
-import Button from "../components/UI/Buttons"
+import { Button } from "../components/UI/Buttons"
 import { useForm } from "react-hook-form"
 
 import styles from "./contact.module.css"

@@ -6,7 +6,7 @@ import Container from "../components/container"
 
 import styles from "./index.module.css"
 import { graphql, useStaticQuery } from "gatsby"
-import Button from "../components/UI/Buttons"
+import { Button } from "../components/UI/Buttons"
 import VideoPlayer from "../components/videoPlayer"
 import { Link } from "gatsby"
 import Companies from "../components/companies/companies"

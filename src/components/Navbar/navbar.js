@@ -3,41 +3,15 @@ import PropTypes from "prop-types"
 import React, { useState, useEffect } from "react"
 import styles from "./navbar.module.css"
 import Container from "../container"
-import Logo from "../logo"
-import Hamburger from "./hamburger"
-import FullScreenMenu from "./FullScreenMenu"
 
 const Navbar = ({ siteTitle }) => {
-  const [scrollPosition, setScrollPosition] = useState(window.pageYOffset)
-  const [visible, setIsVisible] = useState(true)
 
-  const classNames = [styles.header]
-
-  if (!visible) {
-    classNames.push(styles.headerHidden)
-  }
 
   useEffect(() => {
-    const handleScroll = () => {
-      const prevScrollPos = scrollPosition
-      const currentScrollPos = window.pageYOffset
-      const visible = prevScrollPos > currentScrollPos
-      setIsVisible(visible)
-      setScrollPosition(prev => currentScrollPos)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [scrollPosition])
 
   return (
     <header
-      className={classNames.join(" ")}
-      style={{
-        backgroundColor: scrollPosition == 0 ? "transparent" : "#fff",
-        boxShadow: scrollPosition == 0 ? "" : `0 1px 1px rgba(6,8,8,.1)`,
-      }}
+      className={style.header}
     >
       <Container>
         <nav className={styles.nav}>

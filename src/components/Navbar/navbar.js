@@ -6,7 +6,7 @@ import Container from "../container"
 
 const Navbar = ({ siteTitle }) => {
   return (
-    <header className={style.header}>
+    <header className={styles.header}>
       <Container>
         <nav className={styles.nav}>
           <div className={styles.brand}>spark medium</div>

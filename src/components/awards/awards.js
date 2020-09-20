@@ -43,7 +43,7 @@ const Awards = props => {
     },
   ].map((el, index) => (
     <Col xs={6} sm={6} md={3} className={styles.col}>
-      <Fade direction="up" triggerOnce delay={75 * index}>
+      <Fade direction="up" triggerOnce delay={50 * index}>
         <>
           <div className={styles.imgBlock}>
             <img src={el.img} width="105" height="105" />

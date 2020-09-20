@@ -88,7 +88,7 @@ const Projects = props => {
   ))
 
   return (
-    <Grid cols="2" style={{ gridColumnGap: "10rem" }}>
+    <Grid cols="2" style={{ gridColumnGap: "12rem" }}>
       {items}
     </Grid>
   )

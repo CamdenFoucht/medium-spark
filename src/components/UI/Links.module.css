@@ -1,4 +1,5 @@
 .link {
+  display: inline-block;
   position: relative;
   letter-spacing: -0.51px;
   line-height: 32px;
@@ -25,6 +26,7 @@
   height: 4px;
   background: #45b29a;
   content: "";
+  overflow-wrap: break-word;
 }
 
 .link:hover::after {
@@ -36,4 +38,26 @@
 
 .link svg {
   margin-left: 8px;
+}
+
+/* Sizes */
+
+.linkLarge {
+  font-size: 2rem;
+}
+
+.linkNormal {
+  font-size: 1.6rem;
+}
+
+.linkSmall {
+}
+
+@media only screen and (max-width: 568px) {
+  .linkNormal {
+    font-size: 1rem;
+  }
+  .linkLarge {
+    font-size: 1.4rem;
+  }
 }

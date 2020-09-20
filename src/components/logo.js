@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 const Logo = () => {
@@ -21,11 +21,13 @@ const Logo = () => {
         fontWeight: 600,
         fontSize: "2rem",
         color: "#222",
-        fontWeight: 400,
+        fontWeight: 700,
         textTransform: "capitalize",
       }}
     >
-      Spark Medium
+      <Link to="/" style={{ color: "currentColor", textDecoration: "none" }}>
+        Spark Medium
+      </Link>
     </h1>
   )
 }

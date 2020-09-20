@@ -29,13 +29,19 @@
 }
 
 .brand {
+  text-decoration: none;
+}
+
+.brand h1 {
   display: flex;
   align-items: center;
   font-weight: 600;
   font-size: 2rem;
   color: #222;
-  font-weight: 400;
+  font-weight: bold;
   text-transform: capitalize;
+  text-decoration: none;
+  margin: 0;
 }
 
 .list {
@@ -160,11 +166,19 @@
     padding: 0 0.5rem;
     font-size: 1rem;
   }
-  .brand {
+  .brand h1 {
     font-size: 1rem;
   }
   .nav {
     padding: 1rem 0;
+  }
+  .activeLink::before,
+  .link::before {
+    height: 2px;
+    top: 15px;
+  }
+  .brand h1 {
+    font-size: 1.6rem;
   }
 }
 
@@ -173,9 +187,7 @@
     padding: 0 0.5rem;
     font-size: 0.8rem;
   }
-  .brand {
-    font-size: 1rem;
-  }
+
   .nav {
     padding: 1rem 0;
   }

@@ -69,7 +69,7 @@ const IndexPage = () => {
                   We are an advertisement studio from California. We turn
                   products and ideas into extraordinary digital advertisements
                   and sales.{" "}
-                  <AnimatedLink text="See our work" to="/work" size="2.2rem" />
+                  <AnimatedLink text="See our work" to="/work" large />
                 </p>
               </FadeIn>
             </div>
@@ -92,33 +92,35 @@ const IndexPage = () => {
       </div>
       <Section>
         <div className={styles.aboutFlex}>
-          <FadeIn>
-            <div className={styles.aboutLeft}>
+          <div className={styles.aboutLeft}>
+            <FadeIn>
               <p className={styles.aboutP}>
                 As a full-service commercial agency, we work closely with our
                 clients to define, design and develop advertisements than can be
                 used across all platforms.
               </p>
-            </div>
-          </FadeIn>
-          <FadeIn>
-            <div className={styles.aboutRight}>
-              <div className={styles.aboutRightContainer}>
+              <AnimatedLink text="About Spark Medium" to="/about" normal />
+            </FadeIn>
+          </div>
+          <div className={styles.aboutRight}>
+            <div className={styles.aboutRightContainer}>
+              <FadeIn>
                 <div className={styles.aboutSpan}>
                   <CountUp end={20} />
                 </div>
                 <span>Animators and Designers</span>
-              </div>
-              <div>
+              </FadeIn>
+            </div>
+            <div>
+              <FadeIn>
                 <div className={styles.aboutSpan}>
                   <CountUp end={6} />
                 </div>
                 <span>years in business</span>
-              </div>
+              </FadeIn>
             </div>
-          </FadeIn>
+          </div>
         </div>
-        <AnimatedLink text="About Spark Medium" to="/about" size="1.6rem" />
       </Section>
       <Section>
         <h2 className={styles.sectionHeading}>Our Work</h2>
@@ -132,7 +134,7 @@ const IndexPage = () => {
         <h2
           className={styles.sectionHeading}
           style={{ textAlign: "center" }}
-        >{`We've had the pleasure to work with`}</h2>
+        >{`Trusted by`}</h2>
         <Companies max={12} xs={6} sm={4} md={3} lg={3} />
       </Section>
 

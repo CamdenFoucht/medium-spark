@@ -7,6 +7,7 @@
   position: relative;
   width: 100%;
   padding-top: 93.333333333333%;
+  padding-top: 120%;
   overflow: hidden;
 }
 
@@ -59,11 +60,31 @@
   padding-top: 4rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .workProject {
+    margin-bottom: 2rem;
+  }
+  .workCard {
+    padding-top: 93.3333333%;
+  }
+  .workCompany {
+    margin-top: 0.5em;
+    font-size: 1.4rem;
+  }
+  .isOdd {
+    padding-top: 0;
+  }
+}
+
 @media only screen and (max-width: 568px) {
   .workProject {
     margin-bottom: 2rem;
   }
+  .workCard {
+    padding-top: 90.3333333%;
+  }
   .workCompany {
+    margin-top: 0.25em;
     font-size: 1.4rem;
   }
   .isOdd {

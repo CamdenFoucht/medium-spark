@@ -30,7 +30,7 @@
 }
 
 .heading {
-  font-size: 20px;
+  font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 2.5rem;
   color: #2d2d43;
@@ -40,9 +40,9 @@
   color: rgba(0, 0, 0, 0.65);
   font-weight: 500;
   font-size: 1.6rem;
-  padding: 1rem 0;
   text-decoration: none;
   transition: 0.3s;
+  margin: 1rem 0;
 }
 
 .phoneNumber {
@@ -67,10 +67,20 @@
 }
 
 @media only screen and (max-width: 568px) {
+  .footer {
+    padding: 3rem 0;
+  }
   .col {
     width: 100%;
   }
+  .heading {
+    margin-bottom: 1rem;
+  }
   .link {
     font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  .col {
+    margin-bottom: 2rem;
   }
 }

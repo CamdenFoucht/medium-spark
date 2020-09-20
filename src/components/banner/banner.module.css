@@ -9,6 +9,8 @@
   color: #45b29a;
   color: #fff;
   color: #3c424f;
+  color: #000;
+  font-weight: 800;
 }
 
 @media only screen and (max-width: 568px) {
@@ -17,7 +19,6 @@
     font-size: 1.8rem;
   }
   .banner {
-    padding: 3rem 0;
     text-align: center;
   }
   .svgContainer {

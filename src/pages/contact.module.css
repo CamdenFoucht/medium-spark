@@ -1,3 +1,55 @@
+.wrapper2 {
+  margin-top: 6rem;
+  /* box-shadow: 0 10px 30px 0 #e6f4fd; */
+  /* background: #fff; */
+}
+
+.row {
+  /* border: 1px solid #fafafa; */
+  /* box-shadow: 0 10px 30px 0 #e6f4fd; */
+  /* border: 3px solid #e4f5fe; */
+}
+
+.left {
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  /* border: 2px solid #e6f4fd; */
+}
+
+.right {
+  padding: 3rem;
+  background: linear-gradient(
+    68deg,
+    rgba(231, 244, 250, 0.64),
+    rgba(205, 236, 255, 0.64)
+  );
+  background: #fff;
+  /* border-left: 1px solid #15141a;
+border-left: 1px solid #45b29a;
+border-left: 1px solid rgb(98, 125, 152); */
+  background: #15141a;
+  background: linear-gradient(121.5deg, #f5fbff 0%, #f2f2fa 100%);
+  color: #fff;
+  background: linear-gradient(
+    68deg,
+    rgba(231, 244, 250, 0.64),
+    rgba(205, 236, 255, 0.64)
+  );
+  color: #000;
+  /* background: rgb(21, 20, 26); */
+  font-size: 1.6rem;
+  background: #e4f5fe;
+  background: #fff;
+  border-left: 1px solid #e4f5fe;
+}
+
+.right svg {
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+}
+
 .wrapper {
   max-width: 70rem;
   margin: auto;
@@ -7,9 +59,10 @@
 
 .h1 {
   font-size: 4.8rem;
+  margin-top: 6rem;
   margin-bottom: 3rem;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.8);
+  color: #000;
 }
 
 .p {
@@ -17,7 +70,8 @@
   font-size: 15px;
   line-height: 30px;
   line-height: 1.8em;
-  color: #747c83;
+  color: #000;
+  max-width: 60rem;
 }
 
 .contactForm {
@@ -45,9 +99,10 @@
 .label {
   font-weight: 500;
   color: #102a43;
+  color: #000;
   line-height: 2.5rem;
   font-size: 14px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .input,
 .textarea {
@@ -77,6 +132,11 @@ input:active,
   outline: none;
 }
 
+.inputError,
+.textareaError {
+  border-color: #bf1515 !important;
+}
+
 .textarea {
   min-height: 25rem;
 }
@@ -90,27 +150,49 @@ input:active,
 .address {
   margin: 0;
   color: rgb(98, 125, 152);
+  color: #fff;
+  color: #000;
+  color: inherit;
+  display: flex;
+  align-items: flex-start;
 }
 
 .contactInfo {
-  border-top-width: 1px;
+  /* border-top-width: 1px;
   border-top-color: #ebebf5;
   border-top-style: solid;
   padding-top: 30px !important;
   margin-top: 0px !important;
   margin-right: 0px !important;
   margin-bottom: 3rem !important;
-  margin-left: 0px !important;
+  margin-left: 0px !important; */
+  color: #fff;
+  color: #000;
+  color: inherit;
+  display: flex;
+  font-size: 2.4rem;
+}
+
+.conctactP {
+  line-height: 1.8em;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #e4f5fe;
 }
 
 .blurb {
   padding: 1rem 0;
-  color: rgb(98, 125, 152);
+  color: inherit;
+  /* color: #fff;
+  color: #000; */
+  display: flex;
 }
 
 .contactLink {
-  color: rgb(98, 125, 152);
+  color: inherit;
   text-decoration: none;
+  /* color: #fff;
+  color: #000; */
+  display: flex;
 }
 
 @keyframes fadeIn {
@@ -147,6 +229,7 @@ input:active,
 
 .blurBG {
   background: #45b29a;
+  background: #15141a;
   height: 50px;
   width: 50px;
   position: absolute;
@@ -207,6 +290,9 @@ input:active,
   transition-delay: 0.5s;
   opacity: 0;
   text-decoration: none;
+  cursor: pointer;
+  background: #45b29a;
+  color: #fff;
 }
 
 .active {
@@ -237,4 +323,46 @@ input:active,
 .spinnerContainer {
   margin: auto;
   text-align: center;
+}
+
+@media only screen and (min-width: 1080px) {
+  .left {
+    padding: 6rem 9rem;
+  }
+  .right {
+    padding: 6rem;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .h1 {
+    margin-top: 2rem;
+    font-size: 2.4rem;
+  }
+  .p {
+    margin-bottom: 0;
+  }
+  .left {
+    padding: 1.75rem;
+  }
+  .right {
+    margin-top: 3rem;
+    padding: 1.75rem;
+  }
+  .wrapper2 {
+    margin-top: 2rem;
+  }
+  .input,
+  .textarea {
+    font-size: 1.2rem;
+  }
+  .contactInfo {
+    font-size: 1.6rem;
+  }
+  .contactP {
+    font-size: 1.2rem;
+  }
+  .right {
+    font-size: 1.2rem;
+  }
 }

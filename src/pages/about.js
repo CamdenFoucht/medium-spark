@@ -17,10 +17,10 @@ import styles from "./about.module.css"
 
 const AboutPage = () => (
   <Layout>
-    <SEO title="about" />
-    <FadeIn>
-      <header className={styles.header}>
-        <Container>
+    <SEO title="About" />
+    <header className={styles.header}>
+      <Container>
+        <FadeIn>
           <h1 className={styles.headerH1}>
             {`We are Spark Medium`}
             <span className="primary">.</span>
@@ -68,14 +68,14 @@ const AboutPage = () => (
               </Col>
             </Row>
           </div>
-        </Container>
-      </header>
-    </FadeIn>
+        </FadeIn>
+      </Container>
+    </header>
     <Section id="what we do">
       <SectionHeading>What we create</SectionHeading>
       <Row>
         <Col xs={12} md={6}>
-          <Fade direction="up" triggerOnce>
+          <Fade direction="up" triggerOnce cascade duration={250}>
             <h4 className={styles.h4}>Stunning commericials</h4>
             <p className={styles.text}>
               We are a fun-loving design studio based in Amsterdam and love
@@ -92,7 +92,7 @@ const AboutPage = () => (
           </Fade>
         </Col>
         <Col xs={12} md={6}>
-          <Fade direction="up" triggerOnce delay={75}>
+          <Fade direction="up" triggerOnce cascade duration={250} delay={75}>
             <h4 className={styles.h4}>From idea to launch</h4>
             <p className={styles.text}>
               Whether you have a new startup or an established business; we help
@@ -113,7 +113,7 @@ const AboutPage = () => (
 
     <Section id="clients">
       <SectionHeading>Clients & Partners</SectionHeading>
-      <Companies text cols={4} xs={12} sm={6} md={3} lg={3} />
+      <Companies text cols={4} xs={6} sm={6} md={3} lg={3} />
     </Section>
     <Section background="#15141a">
       <SectionHeading color="#fff">What they say</SectionHeading>

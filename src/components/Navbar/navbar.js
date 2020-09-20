@@ -11,17 +11,12 @@ const Navbar = ({ siteTitle }) => {
     <header className={styles.header}>
       <Container>
         <nav className={styles.nav}>
-          <div className={styles.brand}>spark medium</div>
+          <div>
+            <Link className={styles.brand} to="/">
+              <h1>spark medium</h1>
+            </Link>
+          </div>
           <ul className={styles.list}>
-            <li className={styles.item}>
-              <Link
-                className={styles.link}
-                to="/"
-                activeClassName={styles.activeLink}
-              >
-                Home
-              </Link>
-            </li>
             <li className={styles.item}>
               <Link
                 className={styles.link}

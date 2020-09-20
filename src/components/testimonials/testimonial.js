@@ -6,6 +6,7 @@ import Container from "../container"
 import styles from "./testimonials.module.css"
 import LeftArrow from "../../images/left-arrow.svg"
 import RightArrow from "../../images/right-arrow.svg"
+import Section from "../UI/section"
 
 const Testimonials = props => {
   const [activeQuote, setActiveQuote] = useState(0)
@@ -13,32 +14,23 @@ const Testimonials = props => {
   const quotes = [
     {
       text:
-        "“Clay functioned as part of our team, helping to crystalize our vision and delivering incredible results in a record time.”",
+        "Spark Medium functioned as part of our team, helping to crystalize our vision and delivering incredible advertisements in a record time.”",
       name: "Steve jobs",
-      position: "CEO, APPLE",
+      position: "CEO, Apple",
     },
     {
       text:
-        "“Shortly after launching Clay’s designs, we were featured in the App Store and on Google Play”",
+        "“Shortly after launching Spark Medium's commercials, we received nearly double the downloads on the app store.”",
       name: "Bill Gates",
       position: "CEO, Microsoft",
     },
     {
       text:
-        "“Since 2010 we’ve been working with amazing organisations to create meaningful impact and compelling experiences that deliver results.”",
+        "“Since 2016 we’ve been working with Spark Medium, and they have continually impressed us with each advertisement.”",
       name: "Tom Hardy",
       position: "Actor, Batman Origins",
     },
   ]
-
-  const nextSlide = () => {
-    if (activeQuote + 1 >= quotes.length) {
-      setActiveQuote(0)
-    } else {
-      setActiveQuote(prev => prev + 1)
-    }
-  }
-
   const slideHandler = index => {
     if (index >= quotes.length) {
       index = 0
@@ -89,34 +81,28 @@ const Testimonials = props => {
   })
 
   return (
-    <div
-      style={{ position: "relative", background: "#15141a", padding: "3rem 0" }}
-    >
-      <Container bottom>
-        <Fade direction="up" triggerOnce>
-          <div className={styles.flexContainer}>
-            <div className={styles.quoteWrapper}>{arr}</div>
-            <div>
-              <div className={styles.arrowWrapper}>
-                <button
-                  className={styles.arrowBtn}
-                  onClick={() => slideHandler(activeQuote - 1)}
-                >
-                  <LeftArrow />
-                </button>
-                <div className={styles.lineWrapper}>{dashes}</div>
-                <button
-                  className={styles.arrowBtn}
-                  onClick={() => slideHandler(activeQuote + 1)}
-                >
-                  <RightArrow />
-                </button>
-              </div>
-            </div>
+    <Fade direction="up" triggerOnce duration={250}>
+      <div className={styles.flexContainer}>
+        <div className={styles.quoteWrapper}>{arr}</div>
+        <div>
+          <div className={styles.arrowWrapper}>
+            <button
+              className={styles.arrowBtn}
+              onClick={() => slideHandler(activeQuote - 1)}
+            >
+              <LeftArrow />
+            </button>
+            <div className={styles.lineWrapper}>{dashes}</div>
+            <button
+              className={styles.arrowBtn}
+              onClick={() => slideHandler(activeQuote + 1)}
+            >
+              <RightArrow />
+            </button>
           </div>
-        </Fade>
-      </Container>
-    </div>
+        </div>
+      </div>
+    </Fade>
   )
 }
 

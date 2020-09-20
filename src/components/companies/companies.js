@@ -78,12 +78,12 @@ const Companies = props => {
   const list = partners.map((el, index) => {
     return (
       <Col xs={props.xs} sm={props.sm} md={props.md} lg={props.lg}>
-        <Fade triggerOnce direction="up" delay={index * 50} triggerOnce>
+        <Fade direction="up" delay={index * 50} triggerOnce duration={500}>
           <div
             className={props.text ? styles.containerText : styles.containerLogo}
           >
             <div>{el.logo}</div>
-            {props.text ? <p style={{ marginTop: "3rem" }}>{el.text}</p> : null}
+            {props.text ? <p className={styles.text}>{el.text}</p> : null}
           </div>
         </Fade>
       </Col>

@@ -38,12 +38,14 @@
   fill: #a2a7b1; */
 }
 
+.text {
+  margin-top: 3rem;
+}
+
 @media only screen and (max-width: 568px) {
 }
 
 @media only screen and (max-width: 768px) {
-}
-@media only screen and (max-width: 568px) {
 }
 
 .containerLogo {
@@ -51,4 +53,23 @@
   justify-content: center;
   padding: 1rem;
   margin-bottom: 3rem;
+}
+@media only screen and (max-width: 568px) {
+  .containerLogo {
+    margin-bottom: 1.25rem;
+  }
+  .containerText {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    padding: 0 0;
+  }
+  .containerText svg {
+    width: 100px;
+    height: 7rem;
+  }
+  .text {
+    font-size: 0.8rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
 }

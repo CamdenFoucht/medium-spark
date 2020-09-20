@@ -113,7 +113,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 568px) {
   .quoteWrapper {
     width: 100%;
     min-height: 400px;
@@ -126,6 +126,6 @@
     margin-left: 0;
   }
   .char {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }

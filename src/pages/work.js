@@ -21,7 +21,7 @@ const WorkPage = () => {
       <SEO title="work" />
       <Section padding="large">
         <FadeIn>
-          <h1 className={styles.h1}>Our Work</h1>
+          <h1 className={styles.h1}>Our Work<span className="primary">.</span></h1>
         </FadeIn>
         <div>
           <Projects onClick={openPlayer} />

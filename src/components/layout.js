@@ -13,7 +13,7 @@ import "./layout.css"
 import Footer from "./footer/footer"
 import Banner from "./banner/banner"
 
-const Layout = ({ children }) => {
+const Layout = props => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -28,8 +28,8 @@ const Layout = ({ children }) => {
     <>
       <Navbar siteTitle={data.site.siteMetadata.title} />
       <div>
-        <main>{children}</main>
-        <Banner />
+        <main>{props.children}</main>
+        {!props.hideBanner ? <Banner /> : null}
         <Footer />
       </div>
     </>

@@ -44,14 +44,14 @@
 
 .item {
   padding: 0 1.5rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .link {
   position: relative;
   color: #252e48;
   font-weight: bold;
-  font-size: 16px;
+  font-size: inherit;
   font-weight: 500;
   text-transform: capitalize;
   color: #38384f;
@@ -158,11 +158,25 @@
 @media only screen and (max-width: 568px) {
   .item {
     padding: 0 0.5rem;
-  }
-  .link {
     font-size: 1rem;
   }
   .brand {
-    font-size: 1.4rem;
+    font-size: 1rem;
+  }
+  .nav {
+    padding: 1rem 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .item {
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
+  }
+  .brand {
+    font-size: 1rem;
+  }
+  .nav {
+    padding: 1rem 0;
   }
 }

@@ -1,9 +1,11 @@
 .headerHeading {
   font-weight: bold;
-  font-size: 4.8rem;
+  font-size: 7.2rem;
   margin-bottom: 3.6rem;
-  line-height: 1.5;
+  line-height: 1.25;
   color: rgba(0, 0, 0, 0.8);
+  color: #3c424f;
+  color: #000;
 }
 
 .headerText {
@@ -11,6 +13,10 @@
   font-weight: 400;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.8);
+  font-size: 2.2rem;
+  color: #3c424f;
+  line-height: 44px;
+  top: 2px;
 }
 
 .hero {
@@ -28,32 +34,38 @@
 
 .link {
   position: relative;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   letter-spacing: -0.51px;
   line-height: 32px;
   padding-bottom: 2px;
   margin-top: 80px;
   margin-bottom: 10px;
   color: #000;
-  border-bottom: 1px solid #45b29a;
   text-decoration: none;
+  color: #3c424f;
+  font-weight: bold;
 }
 
-.link::before {
-  opacity: 1;
-  width: 100%;
-  top: 25px;
-  content: "";
-  height: 5px;
+.link::after {
   position: absolute;
-  background: #99efb5;
-  background: #45b29a;
-  border-radius: 2.5px;
-  left: 0;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.4s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  border-radius: 2px;
   z-index: -1;
-  transition: all 0.15s ease-in-out;
-  transform-origin: left;
-  transform: scaleX(0);
+  height: 4px;
+  background: #45b29a;
+  content: "";
+}
+
+.link:hover::after {
+  height: 100%;
+  background: #e9f7ff;
+  border-radius: 4px;
 }
 
 .link:hover::before {
@@ -81,8 +93,9 @@
 
 .sectionHeading {
   position: relative;
-  font-size: 3.2rem;
-  margin-bottom: 3.2rem;
+  font-size: 2.4rem;
+  margin-bottom: 4rem;
+  color: #3c424f;
 }
 
 .sectionHeading::after {
@@ -249,5 +262,8 @@
   }
   .sectionHeading {
     font-size: 1.8rem;
+  }
+  .link {
+    font-size: 1.2rem;
   }
 }

@@ -1,11 +1,4 @@
-.banner {
-  background-color: #15141a;
-  background-color: #212129;
-  padding: 9rem 0;
-  color: #fff;
-}
-
-.banner svg {
+.svgContainer svg {
   max-height: 300px;
   max-width: 100%;
 }
@@ -15,6 +8,7 @@
   margin-bottom: 3rem;
   color: #45b29a;
   color: #fff;
+  color: #3c424f;
 }
 
 @media only screen and (max-width: 568px) {

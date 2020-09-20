@@ -1,30 +1,31 @@
 import React from "react"
-import Container from "../container"
+
 import Grid from "../grid/grid"
-import { Link } from "gatsby"
-import styles from "./banner.module.css"
 import Undraw2 from "../../images/undraw2.svg"
 import { ButtonLink } from "../UI/Buttons"
+import Section from "../UI/section"
+
+import styles from "./banner.module.css"
 
 const Banner = () => (
-  <section className={styles.banner}>
-    <Container>
-      <Grid
-        cols={2}
-        style={{ alignItems: "center", gridTemplateColumns: "2fr 1fr" }}
-      >
-        <div style={{}}>
-          <h4 className={styles.heading}>Lets start something together!</h4>
-          <div>
-            <ButtonLink to="/contact">Start a Project</ButtonLink>
-          </div>
+  <Section background="linear-gradient(49deg, rgb(235, 242, 245), rgb(230, 242, 250))">
+    <Grid
+      cols={2}
+      style={{ alignItems: "center", gridTemplateColumns: "2fr 1fr" }}
+    >
+      <div style={{}}>
+        <h4 className={styles.heading}>{`Let's start something together!`}</h4>
+        <div>
+          <ButtonLink to="/contact">Start a Project</ButtonLink>
         </div>
-        <div className={styles.svgContainer}>
-          <Undraw2 />
-        </div>
-      </Grid>
-    </Container>
-  </section>
+      </div>
+      <div className={styles.svgContainer}>
+        <Undraw2 />
+      </div>
+    </Grid>
+  </Section>
 )
 
 export default Banner
+
+// background = "#212129"

@@ -37,7 +37,7 @@ export const SectionHeading = props => (
     style={{
       position: "relative",
       fontSize: "3.2rem",
-      marginBottom: "4rem",
+      marginBottom: "5rem",
       color: props.color ? props.color : "rgba(0,0,0,.8)",
     }}
     className={styles.sectionHeading}

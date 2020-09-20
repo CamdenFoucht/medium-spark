@@ -1,0 +1,39 @@
+.link {
+  position: relative;
+  letter-spacing: -0.51px;
+  line-height: 32px;
+  padding-bottom: 2px;
+  margin-bottom: 10px;
+  color: #000;
+  text-decoration: none;
+  color: #3c424f;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.link::after {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.4s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  border-radius: 2px;
+  z-index: -1;
+  height: 4px;
+  background: #45b29a;
+  content: "";
+}
+
+.link:hover::after {
+  height: 100%;
+  background: #e9f7ff;
+  background: #45b29a57;
+  border-radius: 4px;
+}
+
+.link svg {
+  margin-left: 8px;
+}

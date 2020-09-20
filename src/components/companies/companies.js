@@ -1,12 +1,13 @@
 import React from "react"
+import { Fade } from "react-awesome-reveal"
+import { Row, Col } from "react-flexbox-grid"
+
 import Amzn from "../../images/amazon.svg"
 import Fb from "../../images/fb.svg"
 import Cb from "../../images/coinbase.svg"
 import Google from "../../images/google.svg"
 import Cisco from "../../images/cisco.svg"
 import Toyota from "../../images/toyota.svg"
-import Container from "../container"
-import Fade from "react-reveal/Fade"
 
 import styles from "./companies.module.css"
 
@@ -36,12 +37,12 @@ const Companies = props => {
         "Cisco is a learning experience platofrm which addresses itself to enterprises.",
     },
     {
-      logo: <Google />,
+      logo: <Toyota />,
       text:
         "Google is a learning experience platofrm which addresses itself to the entire world.",
     },
     {
-      logo: <Cisco />,
+      logo: <Fb />,
       text:
         "Cisco is a learning experience platofrm which addresses itself to enterprises.",
     },
@@ -55,12 +56,12 @@ const Companies = props => {
       text: "The first digital health insurance that makes your life easier.",
     },
     {
-      logo: <Cisco />,
+      logo: <Toyota />,
       text:
         "Cisco is a learning experience platofrm which addresses itself to enterprises.",
     },
     {
-      logo: <Google />,
+      logo: <Fb />,
       text:
         "Google is a learning experience platofrm which addresses itself to the entire world.",
     },
@@ -76,14 +77,16 @@ const Companies = props => {
 
   const list = partners.map((el, index) => {
     return (
-      <li>
-        <Fade bottom delay={(index % 6) * 50}>
-          <div className={styles.container}>
+      <Col xs={props.xs} sm={props.sm} md={props.md} lg={props.lg}>
+        <Fade triggerOnce direction="up" delay={index * 75} triggerOnce>
+          <div
+            className={props.text ? styles.containerText : styles.containerLogo}
+          >
             <div>{el.logo}</div>
             {props.text ? <p style={{ marginTop: "3rem" }}>{el.text}</p> : null}
           </div>
         </Fade>
-      </li>
+      </Col>
     )
   })
 
@@ -95,12 +98,7 @@ const Companies = props => {
       }}
     >
       <Fade>
-        <ul
-          className={styles.clientList}
-          style={{ gridTemplateColumns: `repeat(${props.cols || 5}, 1fr)` }}
-        >
-          {list}
-        </ul>
+        <Row>{list}</Row>
       </Fade>
     </div>
   )

@@ -1,8 +1,10 @@
 import { Link, useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState, useEffect } from "react"
-import styles from "./navbar.module.css"
+
 import Container from "../container"
+
+import styles from "./navbar.module.css"
 
 const Navbar = ({ siteTitle }) => {
   return (

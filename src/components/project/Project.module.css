@@ -24,9 +24,9 @@
 
 .workCompany {
   position: relative;
-  font-weight: 900;
+  font-weight: bold;
   line-height: 1.25;
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: #242424;
   letter-spacing: -0.02083333em;
   margin-top: 0.75em;
@@ -56,7 +56,7 @@
 }
 
 .isOdd {
-  padding-top: 6rem;
+  padding-top: 4rem;
 }
 
 @media only screen and (max-width: 568px) {

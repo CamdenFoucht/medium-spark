@@ -1,0 +1,16 @@
+.section {
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 568px) {
+  .section {
+    padding: 6rem 0;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .section {
+    padding: 3rem 0;
+  }
+}

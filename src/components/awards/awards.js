@@ -1,124 +1,72 @@
 import React from "react"
-import Amzn from "../../images/amazon.svg"
-import Fb from "../../images/fb.svg"
-import Cb from "../../images/coinbase.svg"
-import Google from "../../images/google.svg"
-import Cisco from "../../images/cisco.svg"
-import Toyota from "../../images/toyota.svg"
-import Container from "../container"
-import Fade from "react-reveal/Fade"
+import { Fade } from "react-awesome-reveal"
+import { Row, Col } from "react-flexbox-grid"
 
 import styles from "./awards.module.css"
 
 const Awards = props => {
+  const items = [
+    {
+      img: "https://humaan.com/wp-content/uploads/2020/01/award-awa.png",
+      text1: "50 Australian Web Awards",
+      text2: "Most awarded agency",
+    },
+    {
+      img: "https://humaan.com/wp-content/uploads/2020/01/award-awa.png",
+      text1: "50 Australian Web Awards",
+      text2: "Most awarded agency 2020",
+    },
+    {
+      img: "https://humaan.com/wp-content/uploads/2020/01/award-awwwards.png",
+      text1: "2 Awwwards Site of the Day",
+      text2: "3 Awwwards Honorable Mentions",
+    },
+    {
+      img: "https://humaan.com/wp-content/uploads/2020/01/award-css-design.png",
+      text1: "10 CSS Design Awards",
+      text2: "Site of the day",
+    },
+    {
+      img: "https://humaan.com/wp-content/uploads/2020/01/award-comm-arts.png",
+      text1: "Communication Arts",
+      text2: "10 Webpicks features",
+    },
+    {
+      img: "https://humaan.com/wp-content/uploads/2020/01/award-comm-arts.png",
+      text1: "WooCommerce Showcase",
+      text2: "Sodashi Feature",
+    },
+    {
+      img: "https://humaan.com/wp-content/uploads/2020/01/award-features.png",
+      text1: "Plus Features from .net magazine,",
+      text2: "The Best Designs, One Page Love &",
+    },
+  ].map((el, index) => (
+    <Col xs={6} sm={6} md={3} className={styles.col}>
+      <Fade direction="up" triggerOnce delay={75 * index}>
+        <>
+          <div className={styles.imgBlock}>
+            <img src={el.img} width="105" height="105" />
+          </div>
+          <p>
+            {el.text1}
+            <br />
+            {el.text2}
+          </p>
+        </>
+      </Fade>
+    </Col>
+  ))
+
   return (
     <div
       style={{
         backgroundColor: props.dark ? "#15141a" : "transparent",
       }}
     >
-      <Fade>
-        <ul className={styles.row} style={{}}>
-          <li>
-            <Fade bottom>
-              <div className={styles.imgBlock}>
-                <img
-                  src="https://humaan.com/wp-content/uploads/2020/01/award-awa.png"
-                  width="105"
-                  height="105"
-                />
-              </div>
-              <p>
-                50 Australian Web Awards
-                <br />
-                Most awarded agency 2016 – 2020
-              </p>
-            </Fade>
-          </li>
-          <li>
-            <Fade bottom>
-              <img
-                src="https://humaan.com/wp-content/uploads/2020/01/award-webby.png"
-                width="144"
-                height="105"
-              />
-              <p>
-                3 Webby nominations
-                <br />3 Honorable Mentions
-              </p>
-            </Fade>
-          </li>
-          <li>
-            <Fade bottom>
-              <img
-                src="https://humaan.com/wp-content/uploads/2020/01/award-awwwards.png"
-                width="105"
-                height="105"
-              />
-              <p>
-                2 Awwwards Site of the Day
-                <br />3 Awwwards Honorable Mentions
-              </p>
-            </Fade>
-          </li>
-          <li>
-            <Fade bottom>
-              <img
-                src="https://humaan.com/wp-content/uploads/2020/01/award-css-design.png"
-                width="105"
-                height="105"
-              />
-              <p>
-                10 CSS Design Awards
-                <br />
-                Site of the day
-              </p>
-            </Fade>
-          </li>
-          <li>
-            <Fade bottom>
-              <img
-                src="https://humaan.com/wp-content/uploads/2020/01/award-comm-arts.png"
-                width="105"
-                height="105"
-              />
-              <p>
-                Communication Arts
-                <br />
-                10 Webpicks features
-              </p>
-            </Fade>
-          </li>
-          <li>
-            <Fade bottom>
-              <img
-                src="https://humaan.com/wp-content/uploads/2020/01/award-woo.png"
-                width="105"
-                height="105"
-              />
-              <p>
-                WooCommerce Showcase
-                <br />
-                Sodashi Feature
-              </p>
-            </Fade>
-          </li>
-          <li>
-            <Fade bottom>
-              <img
-                src="https://humaan.com/wp-content/uploads/2020/01/award-features.png"
-                width="105"
-                height="105"
-              />
-              <p>
-                Plus Features from .net magazine,
-                <br />
-                The Best Designs, One Page Love &
-              </p>
-            </Fade>
-          </li>
-        </ul>
-      </Fade>
+      <div>
+        <Row>{items}</Row>
+      </div>
     </div>
   )
 }

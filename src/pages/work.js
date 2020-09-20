@@ -1,12 +1,13 @@
 import React, { useState } from "react"
-import Grid from "../components/grid/grid"
+import FadeIn from "react-fade-in"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Container from "../components/container"
 import VideoPlayer from "../components/videoPlayer"
+import Projects from "../components/project/projects"
+import Section from "../components/UI/section"
 
 import styles from "./work.module.css"
-import Projects from "../components/project/projects"
 
 const WorkPage = () => {
   const [url, setUrl] = useState("")
@@ -18,14 +19,14 @@ const WorkPage = () => {
   return (
     <Layout>
       <SEO title="work" />
-      <div style={{ padding: "9rem 0 0 0" }}>
-        <Container>
+      <Section padding="large">
+        <FadeIn>
           <h1 className={styles.h1}>Our Work</h1>
-          <div>
-            <Projects onClick={openPlayer} />
-          </div>
-        </Container>
-      </div>
+        </FadeIn>
+        <div>
+          <Projects onClick={openPlayer} />
+        </div>
+      </Section>
       <VideoPlayer src={url} onClose={() => setUrl("")} />
     </Layout>
   )

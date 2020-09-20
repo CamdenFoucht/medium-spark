@@ -1,18 +1,18 @@
 import React, { useState } from "react"
+import FadeIn from "react-fade-in"
+import CountUp from "react-countup"
+
 import Grid from "../components/grid/grid"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Container from "../components/container"
-
 import styles from "./index.module.css"
 import { graphql, useStaticQuery } from "gatsby"
-import { Button } from "../components/UI/Buttons"
 import VideoPlayer from "../components/videoPlayer"
-import { Link } from "gatsby"
 import Companies from "../components/companies/companies"
-import FadeIn from "react-fade-in"
-import CountUp from "react-countup"
 import Projects from "../components/project/projects"
+import Section from "../components/UI/section"
+import AnimatedLink from "../components/UI/Links"
 
 const IndexPage = () => {
   const [url, setUrl] = useState("")
@@ -60,18 +60,17 @@ const IndexPage = () => {
             >
               <FadeIn>
                 <h1 className={styles.headerHeading}>
-                  Advertise your business
+                  Advertise your business<span className="primary">.</span>
                 </h1>
               </FadeIn>
 
               <FadeIn delay={100}>
                 <p className={styles.headerText}>
-                  We turn products and ideas into extraordinary digital
-                  advertisements and sales.
+                  We are an advertisement studio from California. We turn
+                  products and ideas into extraordinary digital advertisements
+                  and sales.{" "}
+                  <AnimatedLink text="See our work" to="/work" size="2.2rem" />
                 </p>
-              </FadeIn>
-              <FadeIn delay={150}>
-                <Button style={{ maxWidth: "200px" }}>Start a Project</Button>
               </FadeIn>
             </div>
             <div className={styles.headerImgContainer}>
@@ -91,65 +90,51 @@ const IndexPage = () => {
           </Grid>
         </Container>
       </div>
-      <section className={styles.section}>
-        <Container>
-          <div className={styles.aboutFlex}>
-            <FadeIn>
-              <div className={styles.aboutLeft}>
-                <p className={styles.aboutP}>
-                  As a full-service commercial agency, we work closely with our
-                  clients to define, design and develop advertisements than can
-                  be used across all platforms.
-                </p>
-              </div>
-            </FadeIn>
-            <FadeIn>
-              <div className={styles.aboutRight}>
-                <div className={styles.aboutRightContainer}>
-                  <div className={styles.aboutSpan}>
-                    <CountUp end={20} />
-                  </div>
-                  <span>Animators and Designers</span>
+      <Section>
+        <div className={styles.aboutFlex}>
+          <FadeIn>
+            <div className={styles.aboutLeft}>
+              <p className={styles.aboutP}>
+                As a full-service commercial agency, we work closely with our
+                clients to define, design and develop advertisements than can be
+                used across all platforms.
+              </p>
+            </div>
+          </FadeIn>
+          <FadeIn>
+            <div className={styles.aboutRight}>
+              <div className={styles.aboutRightContainer}>
+                <div className={styles.aboutSpan}>
+                  <CountUp end={20} />
                 </div>
-                <div>
-                  <div className={styles.aboutSpan}>
-                    <CountUp end={6} />
-                  </div>
-                  <span>years in business</span>
-                </div>
+                <span>Animators and Designers</span>
               </div>
-            </FadeIn>
-          </div>
-          <Link className={styles.link} to="/about">
-            About Spark Medium
-          </Link>
-        </Container>
-      </section>
-      <section className={styles.section}>
-        <Container>
-          <h2 className={styles.sectionHeading}>Our Work</h2>
+              <div>
+                <div className={styles.aboutSpan}>
+                  <CountUp end={6} />
+                </div>
+                <span>years in business</span>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+        <AnimatedLink text="About Spark Medium" to="/about" size="1.6rem" />
+      </Section>
+      <Section>
+        <h2 className={styles.sectionHeading}>Our Work</h2>
+        <div>
+          <Projects max={4} onClick={openPlayer} />
+          <AnimatedLink text="View more work" to="/work" />
+        </div>
+      </Section>
 
-          <div>
-            <Projects max={4} onClick={openPlayer} />
-            <Link to="/work" className={styles.link}>
-              View more work
-            </Link>
-          </div>
-        </Container>
-      </section>
-
-      <section className={styles.section}>
-        <Container>
-          <h2 className={styles.sectionHeading}>Trusted by</h2>
-          <Companies max={10} cols={5} />
-
-          <div className={styles.linkContainer} style={{ marginTop: "3rem" }}>
-            <Link to="/about" className={styles.link}>
-              View all clients
-            </Link>
-          </div>
-        </Container>
-      </section>
+      <Section>
+        <h2
+          className={styles.sectionHeading}
+          style={{ textAlign: "center" }}
+        >{`We've had the pleasure to work with`}</h2>
+        <Companies max={12} xs={6} sm={4} md={3} lg={3} />
+      </Section>
 
       <VideoPlayer src={url} onClose={() => setUrl("")} />
     </Layout>
@@ -157,3 +142,8 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+// <FadeIn delay={150}>
+//   <Link>See our Work</Link>
+//   <Button style={{ maxWidth: "200px" }}>Start a Project</Button>
+// </FadeIn>

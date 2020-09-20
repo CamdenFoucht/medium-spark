@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+
 import styles from "./buttons.module.css"
 
 export const Button = props => (

@@ -1,23 +1,13 @@
 import React, { useState, useRef } from "react"
+import { Fade } from "react-awesome-reveal"
+
 import styles from "./Project.module.css"
-import Fade from "react-reveal/Fade"
-import FadeIn from "react-fade-in"
-import Reveal from "react-reveal/Reveal"
 
 const Project = props => {
-  const [isHovered, setIsHovered] = useState(false)
   const ref = useRef()
 
-  const enterHandler = () => {
-    setIsHovered(true)
-  }
-
-  const leaveHandler = () => {
-    setIsHovered(false)
-  }
-
   return (
-    <Fade bottom delay={props.delay} duration={600}>
+    <Fade triggerOnce direction="up" delay={props.delay} duration={600}>
       <div
         onClick={() => props.onClick(props.src)}
         className={[styles.workProject, props.isOdd ? styles.isOdd : ""].join(

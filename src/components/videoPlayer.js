@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import ModalVideo from "react-modal-video"
 
 const VideoPlayer = props => {
-  console.log(props.url)
   return (
     <div>
       <ModalVideo

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react"
-import Container from "../container"
-import styles from "./testimonials.module.css"
+import { Fade } from "react-awesome-reveal"
 
+import Container from "../container"
+
+import styles from "./testimonials.module.css"
 import LeftArrow from "../../images/left-arrow.svg"
 import RightArrow from "../../images/right-arrow.svg"
 
@@ -90,27 +92,29 @@ const Testimonials = props => {
     <div
       style={{ position: "relative", background: "#15141a", padding: "3rem 0" }}
     >
-      <Container>
-        <div className={styles.flexContainer}>
-          <div className={styles.quoteWrapper}>{arr}</div>
-          <div>
-            <div className={styles.arrowWrapper}>
-              <button
-                className={styles.arrowBtn}
-                onClick={() => slideHandler(activeQuote - 1)}
-              >
-                <LeftArrow />
-              </button>
-              <div className={styles.lineWrapper}>{dashes}</div>
-              <button
-                className={styles.arrowBtn}
-                onClick={() => slideHandler(activeQuote + 1)}
-              >
-                <RightArrow />
-              </button>
+      <Container bottom>
+        <Fade direction="up" triggerOnce>
+          <div className={styles.flexContainer}>
+            <div className={styles.quoteWrapper}>{arr}</div>
+            <div>
+              <div className={styles.arrowWrapper}>
+                <button
+                  className={styles.arrowBtn}
+                  onClick={() => slideHandler(activeQuote - 1)}
+                >
+                  <LeftArrow />
+                </button>
+                <div className={styles.lineWrapper}>{dashes}</div>
+                <button
+                  className={styles.arrowBtn}
+                  onClick={() => slideHandler(activeQuote + 1)}
+                >
+                  <RightArrow />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        </Fade>
       </Container>
     </div>
   )

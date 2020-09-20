@@ -1,28 +1,13 @@
 import React from "react"
+import { useStaticQuery, graphql, Link } from "gatsby"
+
 import Container from "../container"
 import Grid from "../grid/grid"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import styles from "./footer.module.css"
 import Logo from "../logo"
-import Img from "gatsby-image"
+
+import styles from "./footer.module.css"
 
 const Footer = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "footer2.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1900) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
-  const imageData = data.placeholderImage.childImageSharp.fluid
-
-  console.log(data)
-
   return (
     <footer className={styles.footer}>
       <Container>

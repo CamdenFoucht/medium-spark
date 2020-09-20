@@ -75,7 +75,7 @@ const AboutPage = () => (
       <SectionHeading>What we create</SectionHeading>
       <Row>
         <Col xs={12} md={6}>
-          <Fade direction="up" triggerOnce>
+          <Fade direction="up" triggerOnce cascade>
             <h4 className={styles.h4}>Stunning commericials</h4>
             <p className={styles.text}>
               We are a fun-loving design studio based in Amsterdam and love
@@ -92,7 +92,7 @@ const AboutPage = () => (
           </Fade>
         </Col>
         <Col xs={12} md={6}>
-          <Fade direction="up" triggerOnce delay={75}>
+          <Fade direction="up" triggerOnce cascade>
             <h4 className={styles.h4}>From idea to launch</h4>
             <p className={styles.text}>
               Whether you have a new startup or an established business; we help

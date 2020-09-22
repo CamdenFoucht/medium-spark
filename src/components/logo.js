@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
-const Logo = () => {
+const Logo = props => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "spark-logo.png" }) {
@@ -20,7 +20,7 @@ const Logo = () => {
       style={{
         fontWeight: 600,
         fontSize: "2rem",
-        color: "#222",
+        color: props.white ? "#fff" : "#222",
         fontWeight: 700,
         textTransform: "capitalize",
       }}

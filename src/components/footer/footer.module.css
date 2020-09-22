@@ -1,7 +1,9 @@
 .footer {
-  padding: 6rem 0;
+  padding: 9rem 0;
   background-size: cover;
   position: relative;
+  background: #212129;
+  background: rgb(21, 20, 26);
 }
 
 .bg {
@@ -27,19 +29,23 @@
   align-items: flex-start;
   margin-bottom: 3rem;
   font-size: 1.8rem;
+  color: #fff;
+  color: #aaa;
+  color: #777;
 }
 
 .heading {
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: 500;
   margin-bottom: 2.5rem;
   color: #2d2d43;
+  color: #fff;
 }
 
 .link {
-  color: rgba(0, 0, 0, 0.65);
-  font-weight: 500;
-  font-size: 1.6rem;
+  color: inherit;
+  font-weight: 400;
+  font-size: 1.4rem;
   text-decoration: none;
   transition: 0.3s;
   margin: 1rem 0;

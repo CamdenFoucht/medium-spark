@@ -83,23 +83,11 @@ const AboutPage = () => (
               Together with our clients we design and build digital products
               like apps for web & mobile, illustrations and more.
             </p>
-            <p className={styles.text}>
-              We are a fun-loving design studio based in Amsterdam and love
-              walking the thin line between stunning and usable products.
-              Together with our clients we design and build digital products
-              like apps for web & mobile, illustrations and more.
-            </p>
           </Fade>
         </Col>
         <Col xs={12} md={6}>
           <Fade direction="up" triggerOnce cascade duration={250} delay={75}>
             <h4 className={styles.h4}>From idea to launch</h4>
-            <p className={styles.text}>
-              Whether you have a new startup or an established business; we help
-              you build your product. With your input we turn a rough idea into
-              a polished product. At Yummygum, we master a swift, smooth and fun
-              road to the best results.
-            </p>
             <p className={styles.text}>
               Whether you have a new startup or an established business; we help
               you build your product. With your input we turn a rough idea into

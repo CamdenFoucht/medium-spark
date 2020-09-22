@@ -157,9 +157,14 @@
   .headerH1 {
     font-size: 3.2rem;
     margin-bottom: 3rem;
+    font-size: 2.4rem;
+    font-weight: 700;
   }
   .headerP {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    line-height: 1.8em;
+    color: #000;
   }
   .gridRight {
     grid-column-start: 3;

@@ -17,7 +17,7 @@ const Footer = () => {
         >
           <div className={styles.col}>
             <div>
-              <Logo />
+              <Logo white />
             </div>
             <a className={styles.link} href="mailto:sparkmedium@gmail.com">
               sparkmedium@gmail.com

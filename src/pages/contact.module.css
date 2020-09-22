@@ -8,6 +8,9 @@
   /* border: 1px solid #fafafa; */
   /* box-shadow: 0 10px 30px 0 #e6f4fd; */
   /* border: 3px solid #e4f5fe; */
+  box-shadow: 5px 10px 40px 0 #e6f4fd;
+
+  border: 1px solid #e9f6fd;
 }
 
 .left {
@@ -26,6 +29,8 @@
     rgba(205, 236, 255, 0.64)
   );
   background: #fff;
+  height: 100%;
+  margin: 0 -8px;
   /* border-left: 1px solid #15141a;
 border-left: 1px solid #45b29a;
 border-left: 1px solid rgb(98, 125, 152); */
@@ -42,7 +47,11 @@ border-left: 1px solid rgb(98, 125, 152); */
   font-size: 1.6rem;
   background: #e4f5fe;
   background: #fff;
-  border-left: 1px solid #e4f5fe;
+  background: linear-gradient(
+    68deg,
+    rgba(231, 244, 250, 0.64),
+    rgba(205, 236, 255, 0.64)
+  );
 }
 
 .right svg {
@@ -61,7 +70,7 @@ border-left: 1px solid rgb(98, 125, 152); */
   font-size: 4.8rem;
   margin-top: 6rem;
   margin-bottom: 3rem;
-  font-weight: bold;
+  font-weight: 900;
   color: #000;
 }
 
@@ -176,7 +185,7 @@ input:active,
 .conctactP {
   line-height: 1.8em;
   padding-bottom: 3rem;
-  border-bottom: 1px solid #e4f5fe;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .blurb {

@@ -1,9 +1,16 @@
-import React from "react"
+import React, { useState } from "react"
 
 import Grid from "../grid/grid"
 import Project from "./Project"
+import VideoPlayer from "./videoPlayer"
 
 const Projects = props => {
+  const [url, setUrl] = useState("")
+
+  const openPlayer = src => {
+    setUrl(src)
+  }
+
   let projects = [
     {
       title: "Coca-Cola",
@@ -59,24 +66,6 @@ const Projects = props => {
       delay: 50,
       isOdd: true,
     },
-    {
-      title: "Facebook",
-      poster:
-        "https://s3.amazonaws.com/clay.global/static/img/projects/facebook.jpg",
-      src:
-        "https://s3.amazonaws.com/clay.global/static/img/projects/facebook.mp4",
-      delay: 0,
-      isOdd: false,
-    },
-    {
-      title: "Google",
-      poster:
-        "https://s3.amazonaws.com/clay.global/static/img/projects/google.jpg",
-      src:
-        "https://s3.amazonaws.com/clay.global/static/img/projects/google.mp4",
-      delay: 50,
-      isOdd: true,
-    },
   ]
 
   if (props.max) {
@@ -84,13 +73,16 @@ const Projects = props => {
   }
 
   let items = projects.map((el, index) => (
-    <Project onClick={props.onClick} {...el} />
+    <Project onClick={openPlayer} {...el} />
   ))
 
   return (
-    <Grid cols="2" style={{ gridColumnGap: "12rem" }}>
-      {items}
-    </Grid>
+    <>
+      <Grid cols="2" style={{ gridColumnGap: "12rem" }}>
+        {items}
+      </Grid>
+      <VideoPlayer src={url} onClose={() => setUrl("")} />
+    </>
   )
 }
 

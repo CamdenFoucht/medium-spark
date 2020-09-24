@@ -1,11 +1,11 @@
 import React from "react"
 
 import Grid from "../grid/grid"
-import Undraw2 from "../../images/undraw2.svg"
 import { ButtonLink } from "../UI/Buttons"
 import Section from "../UI/section"
 
 import styles from "./banner.module.css"
+import Undraw2 from "../../images/undraw2.svg"
 
 const Banner = () => (
   <Section background="linear-gradient(49deg, rgb(235, 242, 245), rgb(230, 242, 250))">
@@ -31,5 +31,3 @@ const Banner = () => (
 )
 
 export default Banner
-
-// background = "#212129"

@@ -15,6 +15,23 @@ import Container from "../components/container"
 
 import styles from "./about.module.css"
 
+const countUps = [
+  { num: 130, numText: "+", text: "Advertisements made" },
+  { num: 50, numText: "+", text: "Awards & Recognition" },
+  { num: 11, numText: "", text: "Designers & Animators" },
+  { num: 6, numText: "", text: "Years in business" },
+  { num: 100, numText: "%", text: "In-house & Independent" },
+  { num: null, numText: "US", text: "Working globally, proudly American" },
+].map(el => (
+  <Col xs={6} sm={4} md={4} lg={4}>
+    <span className={styles.span}>
+      {el.num ? <CountUp end={el.num} /> : null}
+      {el.numText}
+    </span>
+    <p className={styles.p}>{el.text}</p>
+  </Col>
+))
+
 const AboutPage = () => (
   <Layout>
     <SEO title="About" />
@@ -30,43 +47,7 @@ const AboutPage = () => (
             forward-thinking brands.
           </h1>
           <div>
-            <Row>
-              <Col xs={6} sm={4} md={2} lg={4}>
-                <span className={styles.span}>
-                  <CountUp end={130} />+
-                </span>
-                <p className={styles.p}>Advertisements Made</p>
-              </Col>
-
-              <Col xs={6} sm={4} md={2} lg={4}>
-                <span className={styles.span}>
-                  <CountUp end={50} />+
-                </span>
-                <p className={styles.p}>Awards & Recognition</p>
-              </Col>
-              <Col xs={6} sm={4} md={2} lg={4}>
-                <span className={styles.span}>
-                  <CountUp end={11} />
-                </span>
-                <p className={styles.p}>Designers & Animators</p>
-              </Col>
-              <Col xs={6} sm={4} md={2} lg={4}>
-                <span className={styles.span}>
-                  <CountUp end={6} />
-                </span>
-                <p className={styles.p}>Years in Business</p>
-              </Col>
-              <Col xs={6} sm={4} md={2} lg={4} center="xs">
-                <span className={styles.span}>
-                  <CountUp end={100} />%
-                </span>
-                <p className={styles.p}>In-house & Independent</p>
-              </Col>
-              <Col xs={6} sm={4} md={4} lg={4}>
-                <span className={styles.span}>US</span>
-                <p className={styles.p}>Working globally, proudly American</p>
-              </Col>
-            </Row>
+            <Row>{countUps}</Row>
           </div>
         </FadeIn>
       </Container>
@@ -106,10 +87,6 @@ const AboutPage = () => (
     <Section background="#15141a">
       <SectionHeading color="#fff">What they say</SectionHeading>
       <Testimonials />
-    </Section>
-    <Section>
-      <SectionHeading>Awards & Recognition</SectionHeading>
-      <Awards />
     </Section>
   </Layout>
 )

@@ -8,8 +8,7 @@
   /* border: 1px solid #fafafa; */
   /* box-shadow: 0 10px 30px 0 #e6f4fd; */
   /* border: 3px solid #e4f5fe; */
-  box-shadow: 5px 10px 40px 0 #e6f4fd;
-
+  box-shadow: 5px 10px 40px 10px #e6f4fd;
   border: 1px solid #e9f6fd;
 }
 
@@ -95,67 +94,6 @@ border-left: 1px solid rgb(98, 125, 152); */
   position: relative;
 }
 
-.group {
-  margin-bottom: 2rem;
-}
-
-.labelRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.label {
-  font-weight: 500;
-  color: #102a43;
-  color: #000;
-  line-height: 2.5rem;
-  font-size: 14px;
-  text-transform: capitalize;
-}
-.input,
-.textarea {
-  width: 100%;
-  padding: 9px 20px;
-  border: 1px solid #e1e2eb;
-  background-color: #fff;
-  color: #102a43;
-  caret-color: #829ab1;
-  height: 49px;
-  box-sizing: border-box;
-  font-size: 1.4rem;
-  line-height: 29px;
-  transition: 0.3s;
-}
-.input:focus,
-.input:active,
-.textarea:focus,
-.textarea:active {
-  border: 1px solid #45b29a;
-}
-
-.input:focus,
-input:active,
-.textarea:focus,
-.textarea:active {
-  outline: none;
-}
-
-.inputError,
-.textareaError {
-  border-color: #bf1515 !important;
-}
-
-.textarea {
-  min-height: 25rem;
-}
-
-.error {
-  color: #bf1515;
-  font-size: 1.2rem;
-  animation: fadeIn 0.3s forwards ease-in;
-}
-
 .address {
   margin: 0;
   color: rgb(98, 125, 152);
@@ -167,14 +105,6 @@ input:active,
 }
 
 .contactInfo {
-  /* border-top-width: 1px;
-  border-top-color: #ebebf5;
-  border-top-style: solid;
-  padding-top: 30px !important;
-  margin-top: 0px !important;
-  margin-right: 0px !important;
-  margin-bottom: 3rem !important;
-  margin-left: 0px !important; */
   color: #fff;
   color: #000;
   color: inherit;
@@ -349,21 +279,18 @@ input:active,
     font-size: 2.4rem;
   }
   .p {
+    font-size: 1.4rem;
     margin-bottom: 0;
   }
   .left {
-    padding: 1.75rem;
+    padding: 1.5rem 0;
   }
   .right {
     margin-top: 3rem;
-    padding: 1.75rem;
+    padding: 1.5rem 0.8rem;
   }
   .wrapper2 {
     margin-top: 2rem;
-  }
-  .input,
-  .textarea {
-    font-size: 1.2rem;
   }
   .contactInfo {
     font-size: 1.6rem;

@@ -17,7 +17,7 @@
 
 .containerText svg path,
 .containerLogo svg path {
-  fill: #b2c0d6;
+  /* fill: red; */
   /* fill: #646a78;
   fill: #a2a7b1; */
 }
@@ -26,23 +26,24 @@
 .containerText svg polygon,
 .containerLogo svg rect,
 .containerLogo svg polygon {
-  fill: #b2c0d6;
+  /* fill: red; */
   /* fill: #646a78;
   fill: #a2a7b1; */
 }
 
 .containerText svg *,
 .containerLogo svg * {
-  fill: #b2c0d6;
+  /* fill: #b2c0d6; */
   /* fill: #646a78;
   fill: #a2a7b1; */
 }
 
-.text {
-  margin-top: 3rem;
+.containerText .companyLogo {
+  height: 4rem;
 }
 
-@media only screen and (max-width: 568px) {
+.text {
+  margin-top: 3rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -52,20 +53,23 @@
   display: flex;
   justify-content: center;
   padding: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 @media only screen and (max-width: 568px) {
   .containerLogo {
+    padding: 3rem;
     margin-bottom: 1.25rem;
   }
   .containerText {
-    margin-bottom: 1rem;
-    font-size: 1rem;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
     padding: 0 0;
+  }
+  .containerText .companyLogo {
+    margin-bottom: 1rem;
   }
   .containerText svg {
     width: 100px;
-    height: 7rem;
   }
   .text {
     font-size: 0.8rem;

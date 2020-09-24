@@ -10,7 +10,7 @@
 
 .headerH1 {
   font-size: 6.4rem;
-  font-weight: 900;
+  font-weight: 800;
   margin-bottom: 6rem;
   max-width: 80rem;
   line-height: 1.25;
@@ -105,8 +105,7 @@
 
 .text {
   font-size: 1.6rem;
-  color: #686b77;
-  color: #000;
+  color: rgba(0, 0, 0, 0.8);
   line-height: 34px;
   top: 1px;
   max-width: 500px;

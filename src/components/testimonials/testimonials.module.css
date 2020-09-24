@@ -1,6 +1,6 @@
 .char {
   font-size: 32px;
-  line-height: 50px;
+  line-height: 1.75;
   letter-spacing: -1.2px;
   position: relative;
   font-weight: normal;
@@ -116,13 +116,17 @@
   }
   .char {
     font-size: 2rem;
+    line-height: 2;
+  }
+  .info {
+    font-size: 1.6rem;
   }
 }
 
 @media only screen and (max-width: 568px) {
   .quoteWrapper {
     width: 100%;
-    min-height: 400px;
+    min-height: 200px;
   }
 
   .flexContainer {
@@ -133,5 +137,9 @@
   }
   .char {
     font-size: 1.6rem;
+    line-height: 2;
+  }
+  .info {
+    font-size: 1.4rem;
   }
 }

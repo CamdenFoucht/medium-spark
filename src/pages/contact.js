@@ -45,7 +45,7 @@ const ContactPage = () => {
       <SEO title="Contact" />
       <Section background="#fff">
         <FadeIn>
-          <h1 className={styles.h1}>Get In Touch</h1>
+          <h1 className={styles.h1}>Get In Touch.</h1>
           <p className={styles.p}>
             {`We're here for you, and we're wearing our thinking caps. Have a question about our services? Or just want to send us a message?
         Feel free to use the contact form, or email us at

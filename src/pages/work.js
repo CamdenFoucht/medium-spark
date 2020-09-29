@@ -11,7 +11,7 @@ import styles from "./work.module.css"
 const WorkPage = () => {
   return (
     <Layout>
-      <SEO title="work" />
+      <SEO title="Work" />
       <Section padding="large">
         <FadeIn>
           <h1 className={styles.h1}>

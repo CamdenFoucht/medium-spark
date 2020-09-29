@@ -17,6 +17,8 @@ import Dyson from "../../images/dyson.svg"
 import Intel from "../../images/intel.svg"
 import Ebay from "../../images/ebay.svg"
 import Discord from "../../images/discord.svg"
+import PG from "../../images/pg.svg"
+import GenMills from "../../images/general-mills.svg"
 
 import styles from "./companies.module.css"
 
@@ -48,9 +50,9 @@ const Companies = props => {
         "Costco Wholesale operates a chain of membership-only warehouse clubs",
     },
     {
-      logo: <Apple />,
+      logo: <PG />,
       text:
-        "Apple  designs, develops, and sells consumer electronics, and software.",
+        "Proctor & Gamble is a consumer goods corporation headquartered in Ohio.",
     },
     {
       logo: <OfficeMax />,
@@ -72,9 +74,8 @@ const Companies = props => {
         "Manufactures household appliances such as vacuum cleaners, fans, and lights.",
     },
     {
-      logo: <Intel />,
-      text:
-        "Innovation in cloud computing, data center, Internet of Things, and PC solutions",
+      logo: <GenMills />,
+      text: "Multinational manufacturer and market of branded consumer foods.",
     },
     {
       logo: <Discord />,

@@ -23,6 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding: 2rem;
 }
 
 .hero {
@@ -155,6 +156,9 @@
   .colLeft {
     order: 2;
   }
+  .headerImgContainer {
+    padding: 1rem;
+  }
 }
 
 @media only screen and (max-width: 568px) {
@@ -163,6 +167,7 @@
   }
   .headerImgContainer {
     grid-row-start: 1;
+    padding: 0;
   }
   .hero {
     padding: 6rem 0 3rem;

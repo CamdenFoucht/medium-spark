@@ -6,7 +6,6 @@ import { Row, Col } from "react-flexbox-grid"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Container from "../components/container"
-import { graphql, useStaticQuery } from "gatsby"
 import Companies from "../components/companies/companies"
 import Projects from "../components/project/projects"
 import Section from "../components/UI/section"
@@ -15,28 +14,10 @@ import AnimatedLink from "../components/UI/Links"
 import styles from "./index.module.css"
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "header-img.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
   return (
     <Layout>
       <SEO title="Home" />
-
-      <div
-        className={styles.hero}
-        style={{
-          background: `url(/static/header-bg.svg) no-repeat center center`,
-          backgroundSize: "cover",
-        }}
-      >
+      <div className={styles.hero}>
         <Container>
           <Row>
             <Col xs={12} sm={12} md={5} lg={6} className={styles.colLeft}>
@@ -129,3 +110,6 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+// background: `url(/static/header-bg.svg) no-repeat center center`,
+// backgroundSize: "cover",
